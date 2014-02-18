@@ -74,6 +74,9 @@ class DiceBot(ircbot.SingleServerIRCBot):
     if message[0] == "!" + nick :
       serv.privmsg(room,messagePublic)
 
+    if message[0] in ["!lancer","!lance"] :
+      serv.privmsg(room,"%s fait %s" % (auteur, random.randint(1,6)) )
+
     if message[0] == "!throw" :
       if len(message) != 3 :
         serv.privmsg(auteur,"Erreur, écrire '!throw 1 6' par exemple")
