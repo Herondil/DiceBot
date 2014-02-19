@@ -1,4 +1,4 @@
-score.py
+DiceBot
 ========
 
-A python script to count scores in a IRC channel
+An IRC bot dedicated to generate random dice values
