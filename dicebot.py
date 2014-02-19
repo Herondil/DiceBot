@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 '''
 nom : dice bot
 auteur : Erendil - DoubleZ
@@ -109,22 +109,22 @@ class DiceBot(ircbot.SingleServerIRCBot):
     
     #Commandes réalisable par les modos uniquement
     if auteur in utilisateurs:
-      #En cas de commande erronée
+      #En cas de commande erronée test
       if not (message[0] in ["!pubMessage","!nick","!help","!aide","!modo","!nomodo","!listmodo","!listmodos","!parler","!parle","!throw"]) :
-	serv.privmsg(auteur,"Erreur de commande, utilisez !aide pour voir les commandes")
+		serv.privmsg(auteur,"Erreur de commande, utilisez !aide pour voir les commandes")
 	
       #Commande ne necessitant aucun paramètre
       if message[0] == "!help" or message[0] == "!aide" :
-	serv.privmsg(auteur,"Commandes possibles :")
-	serv.privmsg(auteur,"-****__=_=_=_=_=___****-")
-	serv.privmsg(auteur,"!throw X Y     : lance X dés à Y faces résultat en public")
-	serv.privmsg(auteur,"!modo X        : ajoute X comme utilisateur du bot")
-	serv.privmsg(auteur,"!nomodo X      : retire X comme utilisateur du bot")
-	serv.privmsg(auteur,"!parle X       : fait parler le bot sur #riff")
-	serv.privmsg(auteur,"!nick X        : renomme le bot par X ")
-	serv.privmsg(auteur,"!listmodo      : liste tous les utilisateurs du bot")
-	serv.privmsg(auteur,"!pubMessage X  : change en X le message public donné par !"+nick)
-	serv.privmsg(auteur,"-****__=_=_=_=_=___****-")
+		serv.privmsg(auteur,"Commandes possibles :")
+		serv.privmsg(auteur,"-****__=_=_=_=_=___****-")
+		serv.privmsg(auteur,"!throw X Y     : lance X dés à Y faces résultat en public")
+		serv.privmsg(auteur,"!modo X        : ajoute X comme utilisateur du bot")
+		serv.privmsg(auteur,"!nomodo X      : retire X comme utilisateur du bot")
+		serv.privmsg(auteur,"!parle X       : fait parler le bot sur #riff")
+		serv.privmsg(auteur,"!nick X        : renomme le bot par X ")
+		serv.privmsg(auteur,"!listmodo      : liste tous les utilisateurs du bot")
+		serv.privmsg(auteur,"!pubMessage X  : change en X le message public donné par !"+nick)
+		serv.privmsg(auteur,"-****__=_=_=_=_=___****-")
 
       if message[0] == "!pubMessage" :
         if len(message) == 1 :
