@@ -109,11 +109,11 @@ class DiceBot(ircbot.SingleServerIRCBot):
     
     #Commandes réalisable par les modos uniquement
     if auteur in utilisateurs:
-      ##En cas de commande erronée
+      #En cas de commande erronée
       if not (message[0] in ["!pubMessage","!nick","!help","!aide","!modo","!nomodo","!listmodo","!listmodos","!parler","!parle","!throw"]) :
 	serv.privmsg(auteur,"Erreur de commande, utilisez !aide pour voir les commandes")
 	
-      ## Commande ne necessitant aucun paramètre
+      #Commande ne necessitant aucun paramètre
       if message[0] == "!help" or message[0] == "!aide" :
 	serv.privmsg(auteur,"Commandes possibles :")
 	serv.privmsg(auteur,"-****__=_=_=_=_=___****-")
